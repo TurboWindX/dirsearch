@@ -7,7 +7,7 @@ Installation & Usage
 **Requirement: python 3.7 or higher**
 ```
 sudo apt-get --purge remove python3-adns
-git clone https://github.com/TurboWindX/dirsearch --depth 1` (**RECOMMENDED**)
+git clone https://github.com/TurboWindX/dirsearch --depth 1
 cd dirsearch
 python3 setup.py install
 ```
