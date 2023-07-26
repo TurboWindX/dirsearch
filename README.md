@@ -1,5 +1,17 @@
 <img src="static/logo.png" alt="dirsearch" width="675px">
 
+
+Installation & Usage
+------------
+
+**Requirement: python 3.7 or higher**
+```
+sudo apt-get --purge remove python3-adns
+git clone https://github.com/TurboWindX/dirsearch --depth 1` (**RECOMMENDED**)
+cd dirsearch
+python3 setup.py install
+```
+
 dirsearch - Web path discovery
 =========
 
@@ -48,20 +60,6 @@ Table of Contents
 * [Tips](#tips)
 * [Contribution](#contribution)
 * [License](#license)
-
-
-Installation & Usage
-------------
-
-**Requirement: python 3.7 or higher**
-
-Choose one of these installation options:
-
-- Install with **git**: `git clone https://github.com/maurosoria/dirsearch.git --depth 1` (**RECOMMENDED**)
-- Install with ZIP file: [Download here](https://github.com/maurosoria/dirsearch/archive/master.zip)
-- Install with Docker: `docker build -t "dirsearch:v0.4.3" .` (more information can be found [here](https://github.com/maurosoria/dirsearch#support-docker))
-- Install with PyPi: `pip3 install dirsearch` or `pip install dirsearch`
-- Install with Kali Linux: `sudo apt-get install dirsearch` (deprecated)
 
 
 Wordlists (IMPORTANT)
