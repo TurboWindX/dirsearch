@@ -377,6 +377,13 @@ def parse_arguments():
     )
     request.add_option("--user-agent", action="store", dest="user_agent")
     request.add_option("--cookie", action="store", dest="cookie")
+    request.add_option(
+        "--keep-alive",
+        action="store",
+        dest="keep_alive",
+        metavar="KEEP-ALIVE",
+        help="Keep-alive header (Default is True)",
+    )
 
     # Connection Settings
     connection = OptionGroup(parser, "Connection Settings")
@@ -450,6 +457,7 @@ def parse_arguments():
         help="Number of retries for failed requests",
     )
     connection.add_option("--ip", action="store", dest="ip", help="Server IP address")
+    
 
     # Advanced Settings
     advanced = OptionGroup(parser, "Advanced Settings")
