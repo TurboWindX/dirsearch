@@ -75,6 +75,8 @@ class Requester:
             options["cert_file"],
             options["key_file"],
         )
+        if options["keep_alive"] == "False":
+            self.headers['Keep-Alive'] = None
 
         if options["random_agents"]:
             self._fetch_agents()
@@ -146,7 +148,7 @@ class Requester:
 
         # Safe quote all special characters to prevent them from being encoded
         url = safequote(self._url + path if self._url else path)
-
+        
         # Why using a loop instead of max_retries argument? Check issue #1009
         for _ in range(options["max_retries"] + 1):
             try:
@@ -160,7 +162,8 @@ class Requester:
                     self.set_header("user-agent", random.choice(self.agents))
 
                 # Use prepared request to avoid the URL path from being normalized
-                # Reference: https://github.com/psf/requests/issues/5289
+                # Reference: https://github.com/psf/requests/issues/5289 
+
                 request = requests.Request(
                     options["http_method"],
                     url,
